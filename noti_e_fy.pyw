@@ -1,27 +1,20 @@
 # Display water break notification
-# Alert for battery status
-# birthday reminders for close people
+# Break Notifications
 
 import time
 from win10toast import ToastNotifier
 
-# toaster = ToastNotifier()
-# toaster.show_toast("Hello Buddy!!!",
-#                    "Lets have some 🥤 break",
-#                    r"C:\Users\admin\Desktop\VS_python\noti_e_fy\glass1.ico",
-#                    10)
-
-
-def send_notify(title, msg, icon, interval):
+def send_notify(title: str, msg: str, interval: int, sleep_interval: float, icon=None) -> None:
+    """Popups Notifications for you"""
+    time.sleep(60 * sleep_interval)
     toaster = ToastNotifier()
     toaster.show_toast(title, msg, icon, interval)
 
 
 while True:
-    # send_notify()
-    toaster = ToastNotifier()
-    toaster.show_toast("Hello Buddy!!!",
-                       "Lets have some 🥤 break",
-                       r"C:\Users\admin\Desktop\VS_python\noti_e_fy\glass1.ico",
-                       10)
+    notify
+    send_notify("Hey hii!!!",
+                "Lets have some break", 10, 20)
+    send_notify("Hello Buddy!!!",
+                "Lets have some 🥤 break", 10, 30, r"C:\Users\admin\Desktop\VS_python\noti_e_fy\glass1.ico")
     time.sleep(3600)
